@@ -6,6 +6,7 @@ public class PiotBingTST {
 
 	public static class TST<Value> {
 
+		// TODO This is getting complicated. This is an inner-inner class
 		private static class Node {
 			private char c;
 			// TODO Declare nodes on separate lines

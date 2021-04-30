@@ -2,18 +2,23 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+// TODO Rename all variables to something meaningful
 public class PiotBingTrie {
 
 	public static class TrieST {
 
+		// TODO This is getting complicated. This is an inner-inner class.
+		// We can refactor it later.
 		private static class Node {
 			private int val;
 			private final Node[] next = new Node[TrieST.R];
 		}
 
+		// TODO This is a magic number. Add explanation. Why 123?
 		private static final int R = 123;
 		private Node root = new Node();
 
+		// TODO This method is not used as I can see
 		public boolean contains(final String key) {
 			return get(key) != 0;
 		}
@@ -63,6 +68,7 @@ public class PiotBingTrie {
 		final int n = Integer.parseInt(sc.readLine());
 		for (int i = 0; i < n; i++) {
 			final String word = sc.readLine();
+			// TODO use buffered writer as provided by kattis kattio
 			System.out.println(st.get(word));
 			st.put(word);
 		}
