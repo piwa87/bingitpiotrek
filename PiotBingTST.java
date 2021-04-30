@@ -1,9 +1,3 @@
-/**
- *  This is a tryout with ternary search tree.
- *  It doesn't solve the problem correctly.
- *
- */
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -14,14 +8,12 @@ public class PiotBingTST {
 
 		private static class Node {
 			private char c;
+			// TODO Declare nodes on separate lines
 			private Node left, mid, right;
 			private int val;
 		}
 
 		private Node root;
-
-		public TST() {
-		}
 
 		public boolean contains(final String key) {
 			return get(key) != 0;
@@ -123,24 +115,21 @@ public class PiotBingTST {
 	}
 
 	public static void main(final String[] args) throws NumberFormatException,
-	IOException {
-
+			IOException {
 		final TST<Integer> st = new TST<Integer>();
-
+		// TODO Use buffered reader as provided by kattis, see help
 		final BufferedReader sc = new BufferedReader(new InputStreamReader(
 				System.in));
 		// BufferedReader sc = new BufferedReader(new FileReader("3.in"));
-
 		final int n = Integer.parseInt(sc.readLine());
-
 		final String firstWord = sc.readLine();
 		final char p = firstWord.charAt(0);
 		System.out.println(0);
 		st.put(firstWord, 1);
-
 		for (int i = 1; i < n; i++) {
 			final String word = sc.readLine();
 			if (!st.contains(word)) { // new word!
+				// TODO Use buffered writer as provided by kattis
 				System.out.println(st.get(word));
 				if (word.charAt(0) == p) {
 					st.putAll(word);
