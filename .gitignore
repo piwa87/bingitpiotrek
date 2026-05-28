@@ -2,4 +2,16 @@
 .classpath
 .project
 .vscode
-*.json
+
+# Build and dependencies
+node_modules/
+dist/
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
+
+# Old Java stuff
+*.json~
+out/
